@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+body
+{
+	background-color:rgba(0,0,0,0.05);
+	color: rgba(0,0,0,.8);
+	font-family: "Nunito", sans-serif;
+	font-size: 16px;
+	margin: 0
+}
+.fontbaybay
+{  
+	font-family: "Fleur De Leah", cursive;
+	color: rgba(255,206,0,1.00)
+}
+h1{ font-size: 6vw}
+
+@media (min-width:600px)
+{
+	h1{ font-size: 4vw}
+}
+
+@media (min-width:1000px)
+{
+	h1{ font-size: 3vw}
+}
+
+
+h2{ font-size: 2.5rem}
+h3{ font-size: 2rem;}
+h4{ font-size: 1.75rem}
+h5{ font-size: 1.5rem}
+h6{ font-size: 1rem}
+h1,h2,h3,h4,h5,h6,p{ margin-top: 0; margin-bottom: 5px}
+
+a
+{
+	color:rgba(201,169,0,1.00);
+	text-decoration: none
+}
+a:hover
+{
+	color: deeppink
+}
+.container
+{
+	width: 80%;
+	margin: auto;
+	/*border: 2px solid red;*/
+}
+/* tao 1 hang cho cac cot */
+*{box-sizing: border-box}
+.row
+{
+	display: flex;
+	flex-wrap: wrap
+}
+.col-1 {width: 8.33%; }
+.col-2 {width: 16.66%; }
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"]
+{
+	padding: 15px;
+	/*border: 1px solid red*/
+}
+/*--------------- chia cot cho tablet - ipad-------*/
+@media (min-width:600px)
+		{
+		.col-md-1 {width: 8.33%; }
+		.col-md-2 {width: 16.66%; }
+		.col-md-3 {width: 25%;}
+		.col-md-4 {width: 33.33%;}
+		.col-md-5 {width: 41.66%;}
+		.col-md-6 {width: 50%;}
+		.col-md-7 {width: 58.33%;}
+		.col-md-8 {width: 66.66%;}
+		.col-md-9 {width: 75%;}
+		.col-md-10 {width: 83.33%;}
+		.col-md-11 {width: 91.66%;}
+		.col-md-12 {width: 100%;}
+		}
+@media (min-width:1000px)
+		{
+		.col-lg-1 {width: 8.33%; }
+		.col-lg-2 {width: 16.66%; }
+		.col-lg-3 {width: 25%;}
+		.col-lg-4 {width: 33.33%;}
+		.col-lg-5 {width: 41.66%;}
+		.col-lg-6 {width: 50%;}
+		.col-lg-7 {width: 58.33%;}
+		.col-lg-8 {width: 66.66%;}
+		.col-lg-9 {width: 75%;}
+		.col-lg-10 {width: 83.33%;}
+		.col-lg-11 {width: 91.66%;}
+		.col-lg-12 {width: 100%;}
+		}
+.text-center{ text-align: center}
+.text-end{ text-align: right}
+.text-start{ text-align: left}
+.img-100{ width: 100%; height: auto}
+.d-flex{ 
+			display: flex;
+			flex-wrap: wrap
+		}
+/* chia tach theo chieu ngang*/
+		.justify-content-center{ justify-content: center}
+		.justify-content-between{ justify-content:space-between}
+		.justify-content-start{ justify-content:flex-start}
+		.justify-content-end{ justify-content: flex-end}
+		.justify-content-around{ justify-content: space-around}
+/*chia cach theo chieu doc ..*/		
+.align-items-center{ align-items: center}
+.align-items-end{ align-items: flex-end}
+.align-items-start{ align-items:flex-start}
+.align-items-stretch{ align-items:stretch}
+/*--- huong di cua cac item trong flex*/
+.flex-row{ flex-direction: row}
+.flex-row-reverse{ flex-direction: row-reverse}
+.flex-column{ flex-direction:column}
+.flex-column-reverse{ flex-direction:column-reverse}
+
+#ham1
+{
+	background-image: url("../images/ham.png");
+	background-repeat: no-repeat;
+	background-position: center 80%
+}
+#ham2
+{
+	background-image: url("../images/ham.png");
+	background-repeat: no-repeat;
+	background-position: center 80%;
+	background-size: 25%
+}
+@media (max-width:600px)
+{
+	#ham1,#ham2{ background: none}
+}
+
+.icon-blog a
+{
+	background: white;
+	display: inline-block;
+	width: 70px; height: 70px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 80px;
+	color: #333;
+	margin: 5px
+}
+.icon-blog a:hover
+{ 
+	box-shadow: 0 0 15px rgba(0,0,0,0.4)
+}
+.card-blog-img
+{
+	position: relative;
+	perspective: 500px
+}
+.card-blog-img .content-blog
+{
+	position: absolute; 
+	width: 80%; height: 80%;
+	left: 10%; top:10%;
+	background: rgba(0,0,0,0.4);
+	color: #fff;
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	align-items: center;
+	transition: all 1s;
+	transform: scale(0) rotateX(180deg) rotateY(-180deg);
+/*	transform-style: preserve-3d*/
+}
+.card-blog-img:hover > .content-blog
+{
+		transform:scale(1) rotateX(0deg) rotateY(0)
+}
+
+.banner{
+	position: relative;
+	overflow: hidden
+}
+.banner-caption
+{
+	position: absolute;
+	width: 35%;
+	left: 50%; top: 15%;
+	color: #fff
+}
+.banner-caption img 
+{ height: 50px; width: 140px}
+@media (max-width:900px)
+{
+	.banner .img-100
+	{
+		width: 150%;
+		height: auto;
+		margin-left: -150px
+	}
+	.banner-caption{	
+		width: 70%;
+		left: 25%; top: 5%; 
+	}
+}
+@media (max-width:600px)
+{
+	.banner
+	{
+		width: 100%;
+		height: 100%;
+	}
+	.banner .img-100
+	{
+		width: 300%;
+		height: auto;
+		margin-left: -200px
+	}
+
+}
+nav{ 
+	background: #58732F;
+	position: relative;
+
+	/*border: 2px solid red*/
+}
+nav .btn-toggle
+{
+	position: absolute;
+	top: -40px;
+	right: 2px;
+	width: 35px; 
+	height: 32px;
+	font-size: 18px;
+	color: #4B4B4B
+}
+nav ul
+{ 
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+nav ul li
+{
+	position: relative
+}
+nav ul li a
+{
+	display: block;
+	padding: 5px 20px;
+	border-bottom: 1px dashed #77964A;
+	color: #fff;
+	transition: all 0.5s
+}
+nav ul li a:hover
+{
+	color: #3AEB05;
+	padding-left: 25px
+}
+#menu{ display: none}
+#dropdown-menu 
+{
+	padding-left: 10px;
+	background-color:#638C24;
+	display: none
+}
+@media (min-width:900px)
+{
+	#menu{ display: block !important}
+	.btn-toggle{ display: none}
+	nav ul
+	{ 
+		display: flex;
+		justify-content: center;
+		padding: 10px
+	}
+	nav ul li a {
+		border-bottom: none
+	}
+	#dropdown-menu
+	{
+		position: absolute;
+		left: 0;
+		top: 140%;
+		z-index: 999;
+		flex-direction: column;
+		padding: 5px 10px;
+		width: 200px
+	}
+	#dropdown-menu li
+	{
+		border-bottom: 1px solid rgba(255,255,255,0.4)
+	}
+}
+
+
+
+
